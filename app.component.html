@@ -1,0 +1,26 @@
+<div class="app-wrapper">
+  <div class="card">
+    <div class="card-header">
+      <div class="logo-badge">Ng</div>
+      <h1 class="app-title">Message Display</h1>
+      <span class="framework-tag">Angular</span>
+    </div>
+    <div class="display-section">
+      <h2 class="display-text">{{ displayText }}</h2>
+    </div>
+    <div class="input-section">
+      <label class="input-label" for="messageInput">Message to Display</label>
+      <input
+        id="messageInput"
+        class="message-input"
+        type="text"
+        [(ngModel)]="inputMessage"
+        placeholder="Type your message here..."
+        (keyup.enter)="displayMessage()"
+      />
+      <button class="display-btn" (click)="displayMessage()">
+        Display Message
+      </button>
+    </div>
+  </div>
+</div>
